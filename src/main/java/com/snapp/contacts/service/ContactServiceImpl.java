@@ -40,7 +40,7 @@ public class ContactServiceImpl implements ContactService {
         entity.setName(dto.getName());
         entity.setEmail(dto.getEmail());
         entity.setOrganization(dto.getOrganization());
-        entity.setPhone(dto.getPhone());
+        entity.setPhoneNumber(dto.getPhone());
         return entity;
     }
 
@@ -51,7 +51,7 @@ public class ContactServiceImpl implements ContactService {
             contactDto.setName(contact.getName());
             contactDto.setEmail(contact.getEmail());
             contactDto.setOrganization(contact.getOrganization());
-            contactDto.setPhone(contact.getPhone());
+            contactDto.setPhone(contact.getPhoneNumber());
             contactList.add(contactDto);
         });
         return contactList;
