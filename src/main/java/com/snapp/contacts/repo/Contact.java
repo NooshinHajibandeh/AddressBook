@@ -14,15 +14,15 @@ public class Contact implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "name")
+    @Column(name = "fullName")
     @NotNull
-    private String name;
+    private String fullName;
 
     @Column(name = "phone")
     private String phone;
 
     public Contact(String name, String phone, String email, String organization) {
-        this.name = name;
+        this.fullName = name;
         this.phone = phone;
         this.email = email;
         this.organization = organization;
@@ -46,12 +46,12 @@ public class Contact implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public String getPhone() {
@@ -80,7 +80,7 @@ public class Contact implements Serializable {
 
     @Override
     public String toString() {
-        return "Contact [id=" + id + ", name=" + name + ", phone=" + phone + ", email=" + email + ", organization="
+        return "Contact [id=" + id + ", fullName=" + fullName + ", phone=" + phone + ", email=" + email + ", organization="
                 + organization + "]";
     }
 

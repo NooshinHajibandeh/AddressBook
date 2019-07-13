@@ -37,7 +37,7 @@ public class ContactServiceImpl implements ContactService {
 
     private Contact convertContact(ContactDto dto) {
         Contact entity = new Contact();
-        entity.setName(dto.getName());
+        entity.setFullName(dto.getName());
         entity.setEmail(dto.getEmail());
         entity.setOrganization(dto.getOrganization());
         entity.setPhone(dto.getPhone());
@@ -48,7 +48,7 @@ public class ContactServiceImpl implements ContactService {
         List<ContactDto> contactList = new ArrayList<>();
         contacts.forEach((contact) -> {
             ContactDto contactDto = new ContactDto();
-            contactDto.setName(contact.getName());
+            contactDto.setName(contact.getFullName());
             contactDto.setEmail(contact.getEmail());
             contactDto.setOrganization(contact.getOrganization());
             contactDto.setPhone(contact.getPhone());
