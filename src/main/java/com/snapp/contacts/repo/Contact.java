@@ -18,12 +18,12 @@ public class Contact implements Serializable {
     @NotNull
     private String fullName;
 
-    @Column(name = "phone")
-    private String phone;
+    @Column(name = "phoneNumber")
+    private String phoneNumber;
 
     public Contact(String name, String phone, String email, String organization) {
         this.fullName = name;
-        this.phone = phone;
+        this.phoneNumber = phone;
         this.email = email;
         this.organization = organization;
     }
@@ -54,12 +54,12 @@ public class Contact implements Serializable {
         this.fullName = fullName;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getEmail() {
@@ -80,7 +80,7 @@ public class Contact implements Serializable {
 
     @Override
     public String toString() {
-        return "Contact [id=" + id + ", fullName=" + fullName + ", phone=" + phone + ", email=" + email + ", organization="
+        return "Contact [id=" + id + ", fullName=" + fullName + ", phoneNumber=" + phoneNumber + ", email=" + email + ", organization="
                 + organization + "]";
     }
 
